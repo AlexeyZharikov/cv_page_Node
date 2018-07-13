@@ -2,7 +2,7 @@
   "name": "cv_page_node",
   "version": "1.0.0",
   "description": "cv page developed with Node.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/AlexeyZharikov/cv_page_Node/issues"
   },
-  "homepage": "https://github.com/AlexeyZharikov/cv_page_Node#readme"
+  "homepage": "https://github.com/AlexeyZharikov/cv_page_Node#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
