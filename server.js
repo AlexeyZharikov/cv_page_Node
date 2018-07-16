@@ -1,25 +1,27 @@
 
 let express = require('express');
-let fs = require('fs');
 let app = express();
 
-app.use(express.static('static'));
+
+app.use('/static', express.static('static'));
+app.set('view engine', 'ejs');
 
 app.get('/', (request,response)=>{
-    response.sendFile(__dirname + '/static/index.html', 'utf-8');
+    response.render('index');
 
 });
 app.get('/cv', (request,response)=>{
-    response.sendFile(__dirname + '/static/index.html', 'utf-8');
+    response.render('cv');
+    // response.sendFile(__dirname + '/index.html', 'utf-8');
 
 });
 app.get('/projects', (request,response)=>{
-    response.sendFile(__dirname + '/static/index.html', 'utf-8');
+    response.render('project.ejs');
 
 });
 
 app.get('/contact', (request,response)=>{
-    response.sendFile(__dirname + '/static/index.html', 'utf-8');
+    response.render('contact');
 
 });
 
