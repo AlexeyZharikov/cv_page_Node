@@ -12,11 +12,10 @@ app.get('/', (request,response)=>{
 });
 app.get('/cv', (request,response)=>{
     response.render('cv');
-    // response.sendFile(__dirname + '/index.html', 'utf-8');
 
 });
 app.get('/projects', (request,response)=>{
-    response.render('project.ejs');
+    response.render('project');
 
 });
 
