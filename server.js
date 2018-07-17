@@ -1,9 +1,8 @@
-
-
-
+let bodyParser = require('body-parser');
 let express = require('express');
 let app = express();
 
+let urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use('/static', express.static('static'));
 app.set('view engine', 'ejs');
@@ -24,6 +23,10 @@ app.get('/projects', (request,response)=>{
 app.get('/contact', (request,response)=>{
     response.render('contact');
 
+});
+app.post("/contact", urlencodedParser, (request, response)=>{
+    console.log(request.body);
+    response.render('contact');
 });
 
 app.listen(3000);
